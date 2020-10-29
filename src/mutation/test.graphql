@@ -1,0 +1,39 @@
+scalar DateTime
+
+# Queryスキーマを定義
+type Query {
+  chapter: Chapter
+}
+
+# Mutationスキーマを定義
+type Mutation {
+  create(param: CreateParam!): Chapter!
+  update(param: UpdateParam!): Chapter!
+}
+
+# Chapterスキーマを定義
+type Chapter {
+  no: Int
+  name: String
+  version: String
+  original: Boolean
+  postDate: DateTime
+}
+
+# Create用パラメータ
+input CreateParam {
+  no: Int
+  name: String
+  version: String
+  original: Boolean
+  postDate: DateTime
+}
+
+# Update用パラメータ
+input UpdateParam {
+  no: Int
+  name: String
+  version: String
+  original: Boolean
+  postDate: DateTime
+}

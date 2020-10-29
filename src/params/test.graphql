@@ -1,0 +1,21 @@
+scalar DateTime
+
+# Queryスキーマを定義
+type Query {
+  chapter(param: ChapterParam!): Chapter
+}
+
+# Chapterスキーマを定義
+type Chapter {
+  no: Int
+  name: String
+  version: String
+  original: Boolean
+  postDate: DateTime
+}
+
+# ChapterParamスキーマを定義
+input ChapterParam {
+  # 型の後に"!"を付けることで必須にできる
+  no: Int!
+}

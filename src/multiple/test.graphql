@@ -1,0 +1,16 @@
+scalar DateTime
+
+# Queryスキーマを定義
+type Query {
+  chapters: [Chapter]
+  length: Int!
+}
+
+# Chapterスキーマを定義
+type Chapter {
+  no: Int
+  name: String
+  version: String
+  original: Boolean
+  postDate: DateTime
+}

@@ -1,0 +1,24 @@
+# デフォルトで定義されている型(Scalar型)は以下5種
+# Int
+# Float
+# String
+# Boolean
+# ID
+
+# 独自定義の型は以下のように記述する
+scalar DateTime
+
+# Queryスキーマを定義
+# QueryとMutationは予めGraphQL側で予約されている
+type Query {
+  chapter: Chapter
+}
+
+# Chapterスキーマを定義
+type Chapter {
+  no: Int
+  name: String
+  version: String
+  original: Boolean
+  postDate: DateTime
+}
