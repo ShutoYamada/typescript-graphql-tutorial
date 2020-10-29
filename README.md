@@ -23,7 +23,7 @@ yarn chapter-1
 
 ```graphql
 query {
-    chapter: {
+    chapter {
         no
         name
         version
