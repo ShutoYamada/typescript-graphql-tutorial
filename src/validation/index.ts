@@ -75,36 +75,3 @@ const server = new GraphQLServer(
 server.start(() => {
     console.log(`Server is running on http://localhost:4000`)
 });
-
-
-`
-Query
-# Write your query or mutation here
-mutation($param: CreateParam!) {
-  create(param: $param) {
-    data {
-      no
-      name
-      version
-      original
-      postDate
-    }
-    statusCode
-    error {
-      code
-      value
-    }
-  }
-}
-
-QueryValiables
-{
-    "param": {
-      "no": 5,
-      "name": "Validationを追加する",
-      "version": "1.0.0",
-      "original": true,
-      "postDate": "2020-10-29T:12:00:00Z"
-    }
-  }
-`
